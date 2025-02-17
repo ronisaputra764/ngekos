@@ -26,8 +26,8 @@ class MidtransController extends Controller
             return response()->json(['message' => 'transaction not found'], 404);
         }
 
-        $sid    = env('TWILIO_SID');
-        $token  = env('TWILIO_TOKEN');
+        $sid = env('TWILIO_SID');
+        $token = env('TWILIO_TOKEN');
         $twilio = new Client($sid, $token);
 
         $messages =
@@ -37,7 +37,7 @@ class MidtransController extends Controller
             "Anda bisa datang ke kos: " . $transaction->boardingHouse->name . PHP_EOL .
             "Mulai tanggal: " . date('d-m-y', strtotime($transaction->start_date)) . PHP_EOL . PHP_EOL .
             "Terimakasih atas kepercayaan Anda!" . PHP_EOL .
-            "Kami tungg kedatangan Anda";
+            "Kami tunggu kedatangan Anda";
 
         switch ($transactionStatus) {
             case 'capture':
