@@ -26,8 +26,12 @@ class MidtransController extends Controller
             return response()->json(['message' => 'transaction not found'], 404);
         }
 
+        // $sid    = env('TWILIO_SID');
+        // $token  = env('TWILIO_TOKEN');
+        // $twilio = new Client($sid, $token);
+
         $sid    = "AC347caf8da2a1a97b4f22f584fba03178";
-        $token  = "[AuthToken]";
+        $token  = "ad7062a6d1574799408e7e3b431cf523";
         $twilio = new Client($sid, $token);
 
         $messages =
@@ -52,11 +56,22 @@ class MidtransController extends Controller
             case 'settlement':
                 $transaction->update(['payment_status' => 'success']);
 
+                // $twilio->messages
+                //     ->create(
+                //         "whatsapp:+6289651237747",
+                //         array(
+                //             "from" => "whatsapp:+14155238886",
+                //             "body" => $messages
+                //         )
+                //     );
+
                 $twilio->messages
                     ->create(
-                        "whatsapp+" . $transaction->phone_number,
+                        "whatsapp:+6289651237747", // to
                         array(
                             "from" => "whatsapp:+14155238886",
+                            "contentSid" => "HXb5b62575e6e4ff6129ad7c8efe1f983e",
+                            "contentVariables" => "{'1':'12/1','2':'3pm'}",
                             "body" => $messages
                         )
                     );
