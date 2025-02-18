@@ -1,8 +1,63 @@
 {
+    "version": 2,
     "builds": [
         {
             "src": "public/index.php",
-            "use": "@vercel/php"
+            "use": "@vercel/static-build",
+            "config": {
+                "outputDirectory": "public"
+            }
         }
-    ]
+    ],
+    "env": {
+        "APP_NAME": "ngekos",
+        "APP_ENV": "production",
+        "APP_KEY": "base64:wKBuSC7n25sz/bQiqm8yk7rpjuQFbRX59S9nnmCGurs=",
+        "APP_DEBUG": "false",
+        "APP_TIMEZONE": "UTC",
+        "APP_URL": "https://ngekos.kesug.com",
+        "APP_LOCALE": "en",
+        "APP_FALLBACK_LOCALE": "en",
+        "APP_FAKER_LOCALE": "en_US",
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "3307",
+        "DB_DATABASE": "ngekos",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "",
+        "MIDTRANS_SERVER_KEY": "SB-Mid-server-q8XDc8_XU7h1muou8nDFTx7C",
+        "MIDTRANS_CLIENT_KEY": "SB-Mid-client-dyHK7S-BAnoHFBF6",
+        "MIDTRANS_IS_PRODUCTION": "false",
+        "MIDTRANS_IS_SANITIZED": "true",
+        "MIDTRANS_IS_3DS": "true",
+        "SESSION_DRIVER": "database",
+        "SESSION_LIFETIME": "120",
+        "SESSION_ENCRYPT": "false",
+        "SESSION_PATH": "/",
+        "SESSION_DOMAIN": "null",
+        "BROADCAST_CONNECTION": "log",
+        "FILESYSTEM_DISK": "local",
+        "QUEUE_CONNECTION": "database",
+        "CACHE_STORE": "database",
+        "CACHE_PREFIX": "",
+        "MEMCACHED_HOST": "127.0.0.1",
+        "REDIS_CLIENT": "phpredis",
+        "REDIS_HOST": "127.0.0.1",
+        "REDIS_PASSWORD": "null",
+        "REDIS_PORT": "6379",
+        "MAIL_MAILER": "log",
+        "MAIL_SCHEME": "null",
+        "MAIL_HOST": "127.0.0.1",
+        "MAIL_PORT": "2525",
+        "MAIL_USERNAME": "null",
+        "MAIL_PASSWORD": "null",
+        "MAIL_FROM_ADDRESS": "hello@example.com",
+        "MAIL_FROM_NAME": "ngekos",
+        "AWS_ACCESS_KEY_ID": "",
+        "AWS_SECRET_ACCESS_KEY": "",
+        "AWS_DEFAULT_REGION": "us-east-1",
+        "AWS_BUCKET": "",
+        "AWS_USE_PATH_STYLE_ENDPOINT": "false",
+        "VITE_APP_NAME": "ngekos"
+    }
 }
