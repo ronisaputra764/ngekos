@@ -107,7 +107,7 @@
                             {{-- <img src={{asset('storage/' . $city->image)}} class="w-full h-full object-cover"
                                 alt="icon"> --}}
 
-                                <img src={{'storage/' . $city->image}} class="w-full h-full object-cover"
+                                <img src={{'storage/app/pubic/' . $city->image}} class="w-full h-full object-cover"
                                 alt="icon">
                         </div>
                         <div class="flex flex-col gap-[2px]">
