@@ -24,7 +24,7 @@
                         <div
                             class="flex flex-col items-center w-[120px] shrink-0 rounded-[40px] p-4 pb-5 gap-3 bg-white shadow-[0px_12px_30px_0px_#0000000D] text-center">
                             <div class="w-[70px] h-[70px] rounded-full flex shrink-0 overflow-hidden">
-                                <img src={{asset('storage/' . 'cities/01JKP6DSX4WE5ZFPM8YN3SS8HQ.jpeg')}} class="w-full h-full object-cover"
+                                <img src={{'storage/cities/01JKP6DSX4WE5ZFPM8YN3SS8HQ.jpeg'}} class="w-full h-full object-cover"
                                     alt="thumbnail">
                             </div>
                             <div class="flex flex-col gap-[2px]">
